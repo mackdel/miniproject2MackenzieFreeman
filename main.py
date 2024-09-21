@@ -17,7 +17,20 @@ hotels["Pet-Friendly"] = (
     ~hotels["HotelFacilities"].str.contains('NO Large pets allowed|NO Small pets allowed', na=False)
 )
 
-# Output only the Hotel Star Rating & Pet-Friendly columns
-rating_pets = hotels[["HotelRating", "Pet-Friendly"]]
+# Remove rows where HotelRating is All
+hotels_filtered = hotels[hotels["HotelRating"] != "All"].copy()
 
-print(rating_pets.head())
+# Rename star ratings
+hotels_filtered.loc[:, 'HotelRating'] = hotels_filtered['HotelRating'].replace({
+    'FiveStar': '5',
+    'FourStar': '4',
+    'ThreeStar': '3',
+    'TwoStar': '2',
+    'OneStar': '1'
+})
+
+# Output only the Hotel Star Rating & Pet-Friendly columns
+rating_pets = hotels_filtered[["HotelRating", "Pet-Friendly"]]
+
+print(hotels_filtered["HotelRating"].value_counts(dropna=False))
+print(hotels_filtered.shape[0])
