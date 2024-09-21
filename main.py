@@ -34,3 +34,11 @@ rating_pets = hotels_filtered[["HotelRating", "Pet-Friendly"]]
 
 print(hotels_filtered["HotelRating"].value_counts(dropna=False))
 print(hotels_filtered.shape[0])
+
+# Bar Chart: Amount of Pet-Friendly Hotels by Star Rating
+pet_friendly_counts = hotels_filtered[hotels_filtered["Pet-Friendly"]].groupby('HotelRating').size().reset_index(name='Count')
+plt.bar(pet_friendly_counts['HotelRating'], pet_friendly_counts['Count'], color='r')
+plt.title("Number of Pet-Friendly Hotels by Star Rating")
+plt.xlabel("Star Rating")
+plt.ylabel("Number of Pet-Friendly Hotels")
+plt.show()
