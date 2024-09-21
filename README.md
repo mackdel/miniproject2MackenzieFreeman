@@ -18,7 +18,7 @@ hotel star ratings and pet-friendliness. It will specifically investiagte the qu
 ```
 pip install -r requirements.txt
 ```
-Download the following dataset:
+Download the following hotel dataset from Kaggle:
 [Hotel Dataset](https://www.kaggle.com/datasets/raj713335/tbo-hotels-dataset)
 
 ### Executing program

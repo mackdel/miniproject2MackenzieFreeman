@@ -8,4 +8,3 @@ import matplotlib.pyplot as plt
 # Grab the hotel data
 hotels = pd.read_csv("hotels.csv", index_col=0)
 
-print(hotels.head())
