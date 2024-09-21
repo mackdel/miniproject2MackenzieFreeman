@@ -30,8 +30,8 @@ hotels_filtered.loc[:, 'HotelRating'] = hotels_filtered['HotelRating'].replace({
 })
 
 # 1. Bar Chart: Amount of Pet-Friendly Hotels by Star Rating
-pet_friendly_counts = hotels_filtered[hotels_filtered["Pet-Friendly"]].groupby('HotelRating').size().reset_index(name='Count') # Count of Pet-Friendly hotels grouped by star rating
-plt.bar(pet_friendly_counts['HotelRating'], pet_friendly_counts['Count'], color='r')
+grouped_counts = hotels_filtered[hotels_filtered["Pet-Friendly"]].groupby('HotelRating').size().reset_index(name='Count') # Count of Pet-Friendly hotels grouped by star rating
+plt.bar(grouped_counts['HotelRating'], grouped_counts['Count'], color='r')
 plt.title("Number of Pet-Friendly Hotels by Star Rating")
 plt.xlabel("Star Rating")
 plt.ylabel("Number of Pet-Friendly Hotels")
