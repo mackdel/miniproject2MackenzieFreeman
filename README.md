@@ -18,6 +18,8 @@ hotel star ratings and pet-friendliness. It will specifically investiagte the qu
 ```
 pip install -r requirements.txt
 ```
+Download the following dataset:
+[Hotel Dataset](https://www.kaggle.com/datasets/raj713335/tbo-hotels-dataset)
 
 ### Executing program
 
@@ -27,7 +29,7 @@ python main.py
 
 ## Output
 
-This should create 3 graphs in charts/ to answer the question.
+This should create 3 graphs in charts/ to answer the question: "Is there a correlation between hotel star ratings and pet-friendliness?"
 
 ## Authors
 
