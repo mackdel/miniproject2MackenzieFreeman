@@ -54,3 +54,9 @@ plt.legend(["Non-Pet-Friendly", "Pet-Friendly"])
 plt.show()
 
 # 4. Heatmap: Pet-Friendliess by Hotel Star Rating
+heatmap_data = hotels_filtered.pivot_table(index='HotelRating', columns='Pet-Friendly', aggfunc='size', fill_value=0) # Reshape data into matrix
+sns.heatmap(heatmap_data, annot=True, cmap="RdPu", fmt="d") # Shows data values in each cell
+plt.title("Pet-Friendliness by Hotel Star Rating")
+plt.xlabel("Pet-Friendly")
+plt.ylabel("Hotel Star Rating")
+plt.show()
