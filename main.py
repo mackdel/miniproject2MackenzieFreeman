@@ -58,5 +58,14 @@ heatmap_data = hotels_filtered.pivot_table(index='HotelRating', columns='Pet-Fri
 sns.heatmap(heatmap_data, annot=True, cmap="RdPu", fmt="d") # Shows data values in each cell
 plt.title("Pet-Friendliness by Hotel Star Rating")
 plt.xlabel("Pet-Friendly")
-plt.ylabel("Hotel Star Rating")
+plt.ylabel("Star Rating")
+plt.show()
+
+# 5. 100% Stacked Bar Chart: Pet-Friendly vs. Non-Pet-Friendly Hotels per Star Rating
+stacked_grouped_counts = stacked_grouped_counts.div(stacked_grouped_counts.sum(axis=1), axis=0) * 100 # Calculate the percentages
+stacked_grouped_counts.plot(kind='bar', stacked=True, color=['orange', 'green'])
+plt.title("Pet-Friendly vs Non-Pet-Friendly per Star Rating")
+plt.xlabel("Star Rating")
+plt.ylabel("% of Hotels")
+plt.legend(["Non-Pet-Friendly", "Pet-Friendly"], loc='lower right')
 plt.show()
