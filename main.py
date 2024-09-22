@@ -4,6 +4,7 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Grab the hotel data
 hotels = pd.read_csv("hotels.csv", index_col=0)
@@ -51,3 +52,5 @@ plt.xlabel("Star Rating")
 plt.ylabel("Number of Hotels")
 plt.legend(["Non-Pet-Friendly", "Pet-Friendly"])
 plt.show()
+
+# 4. Heatmap: Pet-Friendliess by Hotel Star Rating
