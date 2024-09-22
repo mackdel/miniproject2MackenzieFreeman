@@ -43,3 +43,7 @@ Inspiration, code snippets, etc.
 * [matplotlib](https://matplotlib.org/stable/tutorials/pyplot.html)
 * [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/overview.html)
 * [hotelsdataset](https://www.kaggle.com/datasets/raj713335/tbo-hotels-dataset)
+* [SaturnCloud Heatmap](https://saturncloud.io/blog/how-to-plot-a-heatmap-from-pandas-dataframe/)
+* [GeeksforGeeks Select Rows](https://www.geeksforgeeks.org/select-rows-that-contain-specific-text-using-pandas/)
+* [Seaborn](https://seaborn.pydata.org/installing.html)
+* [ChatGPT]()
