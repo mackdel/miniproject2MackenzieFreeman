@@ -46,4 +46,4 @@ Inspiration, code snippets, etc.
 * [SaturnCloud Heatmap](https://saturncloud.io/blog/how-to-plot-a-heatmap-from-pandas-dataframe/)
 * [GeeksforGeeks Select Rows](https://www.geeksforgeeks.org/select-rows-that-contain-specific-text-using-pandas/)
 * [Seaborn](https://seaborn.pydata.org/installing.html)
-* [ChatGPT]()
+* [ChatGPT](https://chatgpt.com/share/66f193fc-508c-800b-9a15-50c7ce05bcfd)
