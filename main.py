@@ -41,12 +41,14 @@ plt.title("Number of Pet-Friendly Hotels by Star Rating")
 plt.xlabel("Star Rating")
 plt.ylabel("Number of Pet-Friendly Hotels")
 plt.savefig("charts/BarChart.png")
+plt.clf()
 
 # 2. Pie Chart: Portion of Pet-Friendly and Non-Pet-Friendly Hotels
 pet_friendly_counts = hotels_filtered['Pet-Friendly'].value_counts() # Count of both True and False values in Pet-Friendly
 plt.pie(pet_friendly_counts, labels=['Non-Pet-Friendly', 'Pet-Friendly'], autopct='%1.2f%%', colors=['limegreen', 'turquoise'])
 plt.title("Proportion of Pet-Friendly vs Non-Pet-Friendly Hotels")
 plt.savefig("charts/PieChart.png")
+plt.clf()
 
 # 3. Stacked Bar Chart: Pet-Friendly vs. Non-Pet-Friendly Hotels by Star Rating
 stacked_grouped_counts = hotels_filtered.groupby(['HotelRating', 'Pet-Friendly']).size().unstack(fill_value=0) # Count of both True and False values in Pet-Friendly grouped by star rating
@@ -56,6 +58,7 @@ plt.xlabel("Star Rating")
 plt.ylabel("Number of Hotels")
 plt.legend(["Non-Pet-Friendly", "Pet-Friendly"])
 plt.savefig("charts/StackedBarChart.png")
+plt.clf()
 
 # 4. Heatmap: Pet-Friendliess by Hotel Star Rating
 heatmap_data = hotels_filtered.pivot_table(index='HotelRating', columns='Pet-Friendly', aggfunc='size', fill_value=0) # Reshape data into matrix
@@ -64,6 +67,7 @@ plt.title("Pet-Friendliness by Hotel Star Rating")
 plt.xlabel("Pet-Friendly")
 plt.ylabel("Star Rating")
 plt.savefig("charts/Heatmap.png")
+plt.clf()
 
 # 5. 100% Stacked Bar Chart: Pet-Friendly vs. Non-Pet-Friendly Hotels per Star Rating
 stacked_grouped_counts = stacked_grouped_counts.div(stacked_grouped_counts.sum(axis=1), axis=0) * 100 # Calculate the percentages
