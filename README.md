@@ -1,9 +1,9 @@
 ### INF601 - Advanced Programming in Python
 ### Mackenzie Freeman
-### Mini Project 1
+### Mini Project 2
 
 
-# MiniProject1
+# MiniProject2
 
 ## Description
 
